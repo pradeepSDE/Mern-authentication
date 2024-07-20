@@ -7,6 +7,7 @@ router.use(
     credentials: true,
     origin: "https://mern-authentication-frontend-sooty.vercel.app",
     methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 router.get("/", test);
