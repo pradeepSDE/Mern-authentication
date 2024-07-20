@@ -5,6 +5,13 @@ const mongoose = require('mongoose');
 const coookieParser = require('cookie-parser');
 const cookieParser = require('cookie-parser');
 const app = express();
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://mern-authentication-frontend-sooty.vercel.app",
+    methods: ["GET", "POST"],
+  })
+);
 app.use(express.json())
 app.use(cookieParser())
 app.use('/', require('./routes/authRoute'));
