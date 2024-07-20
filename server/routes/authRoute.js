@@ -6,6 +6,7 @@ router.use(
   cors({
     credentials: true,
     origin: "https://mern-authentication-frontend-sooty.vercel.app",
+    methods: ["GET", "POST"],
   })
 );
 router.get("/", test);
