@@ -56,7 +56,7 @@ const signin = async (req, res) => {
     const compare = await comparePassword(password, user.password);
     if (compare) {
         const token = jwt.sign({ id: user._id , name:user.name, email: user.email }, process.env.JWT_SECRET);
-        res.cookie("token", token);
+        res.cookie("token", token, {sameSite: 'None' });
          
       return res.json({ message: "login successful", data: {user:{
         id: user._id,
