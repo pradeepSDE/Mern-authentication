@@ -67,6 +67,7 @@ const signin = async (req, res) => {
       return res.json({ error: "password incorrect" });
     }
   } catch (e) {
+   return res.json({error:"error logging in, try again"});
     console.log(e);
   }
 };
