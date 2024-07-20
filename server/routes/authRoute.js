@@ -5,7 +5,7 @@ const {test,signup, signin, profile, logout}  = require("../controllers/authCont
 router.use(
   cors({
     credentials: true,
-    origin: "http://mern-authentication-frontend-sooty.vercel.app",
+    origin: "https://mern-authentication-frontend-sooty.vercel.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
