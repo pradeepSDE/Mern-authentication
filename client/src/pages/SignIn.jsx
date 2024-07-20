@@ -20,7 +20,7 @@ const SignIn = () => {
       if (data.error) {
         toast.error(data.error);
       } else {
-        axios.get('/profile').then(({data}) => {
+       await axios.get('/profile').then(({data}) => {
           console.log(data)
             setUser(data);
        });
