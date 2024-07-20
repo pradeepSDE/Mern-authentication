@@ -13,7 +13,7 @@ import {Toaster } from 'react-hot-toast';
 import { UserContextProvider } from './context/userContext';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoutes from './components/ProtectedRoutes';
-axios.defaults.baseURL='https://mern-authentication-api-khaki.vercel.app';
+axios.defaults.baseURL='https://mern-authentication-api-khaki.vercel.app/';
 axios.defaults.withCredentials=true;
 function App() {
   return (
